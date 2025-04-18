@@ -1,0 +1,29 @@
+@model dynamic
+@{
+    var raw = Model.rawData;
+    var fixedData = Model.fixedData;
+    Layout = null;
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<ACORD>
+    <SignonRq>
+        <ClientDt>@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")</ClientDt>
+        <CustLangPref>ENG</CustLangPref>
+    </SignonRq>
+    <InsuranceSvcRq>
+        <RqUID>@raw.TransactionId</RqUID>
+        <InsuredOrPrincipal>
+            <PersonInfo>
+                <PersonName>
+                    <Prefix>@fixedData.Prefix</Prefix>
+                    <GivenName>@fixedData.FirstName</GivenName>
+                    <MiddleName>@fixedData.MiddleName</MiddleName>
+                    <Surname>@fixedData.LastName</Surname>
+                    <Suffix>@fixedData.Suffix</Suffix>
+                </PersonName>
+                <BirthDt>@fixedData.FormattedBirthday</BirthDt>
+                <Phone>@fixedData.NormalizedPhone</Phone>
+            </PersonInfo>
+        </InsuredOrPrincipal>
+    </InsuranceSvcRq>
+</ACORD>
