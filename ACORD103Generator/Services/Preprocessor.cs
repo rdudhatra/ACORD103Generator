@@ -29,7 +29,7 @@ namespace ACORD103Generator
             if (nameParts.Length >= 5)
                 fixedData.Suffix = nameParts[4];
 
-            if (DateTime.TryParse(raw.Birthday, out var dob))
+            if (DateTime.TryParseExact(raw.Birthday, "MM/dd/yyyy", null, System.Globalization.DateTimeStyles.None, out var dob))
                 fixedData.FormattedBirthday = dob.ToString("yyyy-MM-dd");
 
             fixedData.NormalizedPhone = new string(raw.Phone?.Where(char.IsDigit).ToArray());

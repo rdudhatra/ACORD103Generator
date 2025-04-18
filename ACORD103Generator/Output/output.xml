@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ACORD>
+    <SignonRq>
+        <ClientDt>2025-04-18T06:32:16Z</ClientDt>
+        <CustLangPref>ENG</CustLangPref>
+    </SignonRq>
+    <InsuranceSvcRq>
+        <RqUID>TX123456789</RqUID>
+        <InsuredOrPrincipal>
+            <PersonInfo>
+                <PersonName>
+                    <Prefix>Mr.</Prefix>
+                    <GivenName>John</GivenName>
+                    <MiddleName>A.</MiddleName>
+                    <Surname>Doe</Surname>
+                    <Suffix>Jr.</Suffix>
+                </PersonName>
+                <BirthDt>1985-01-15</BirthDt>
+                <Phone>15551234567</Phone>
+            </PersonInfo>
+        </InsuredOrPrincipal>
+    </InsuranceSvcRq>
+</ACORD>
