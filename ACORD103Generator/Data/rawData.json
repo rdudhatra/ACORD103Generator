@@ -1,6 +1,31 @@
+
+
 {
-  "FullName": "Mr. John A. Doe Jr.",
-  "Birthday": "01/15/1985",
-  "Phone": "+1 (555) 123-4567",
-  "TransactionId": "TX123456789"
+  "OwnerFirstName": "John",
+  "OwnerInitial": "A",
+  "OwnerLastName": "Doe",
+  "OwnerSuffix": "Jr.",
+  "OwnerCompanyName": "Doe Enterprises LLC",
+  "OwnerGender": "Male",
+  "OwnerBirthdate": "1985-07-15",
+  "OwnerSSN": "123-45-6789",
+  "OwnerTelephone": "+1-555-123-4567",
+  "OwnerRelationship": "Spouse",
+  "OwnerRelationshipOther": "",
+  "OwnerResidenceAddress": "123 Elm Street",
+  "OwnerMailingAddress": "P.O. Box 456",
+  "OwnerCity": "Springfield",
+  "OwnerState": "IL",
+  "OwnerZip": "62704",
+  "OwnerCountry": "USA",
+  "OwnerEmail": "john.doe@example.com",
+  "OwnerUSCitizen": true,
+  "OwnerCountryOfCitizenship": "USA",
+  "OwnerVisaType": "",
+  "OwnerGovtIssuedID": "Passport",
+  "OwnerGovtIDIssuingCountry": "USA",
+  "OwnerGovtIDNumber": "X12345678",
+  "OwnerDriversLicenseIndicator": true,
+  "OwnerDLState": "IL",
+  "OwnerDLNumber": "D123-4567-8901"
 }

@@ -1,23 +1,332 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ACORD>
-    <SignonRq>
-        <ClientDt>2025-04-18T06:32:16Z</ClientDt>
-        <CustLangPref>ENG</CustLangPref>
-    </SignonRq>
-    <InsuranceSvcRq>
-        <RqUID>TX123456789</RqUID>
-        <InsuredOrPrincipal>
-            <PersonInfo>
-                <PersonName>
-                    <Prefix>Mr.</Prefix>
-                    <GivenName>John</GivenName>
-                    <MiddleName>A.</MiddleName>
-                    <Surname>Doe</Surname>
+
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<TXLife Version="2.27.00">
+    <TXLifeRequest>
+        <TransRefGUID>92a2d790-1ca1-4f4c-b233-cdb5de3af7d8</TransRefGUID>
+        <TransType tc="103">New Business Application Submission</TransType>
+        <TransSubType tc="10300">Transaction Sub Type</TransSubType>
+        <TransExeDate>2025-05-02</TransExeDate>
+        <TransExeTime>05:16:31Z</TransExeTime>
+        <OLifE>
+            <Holding id="Holding_1">
+                <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+                <HoldingStatus tc="3">Proposed</HoldingStatus>
+                <HoldingForm tc="1">Individual</HoldingForm>
+                <Policy>
+                    <PolNumber>#########X</PolNumber>
+                    <PolicyStatus tc="OLI_LU_POLSTAT">Status</PolicyStatus>
+                    <Jurisdiction tc=" OLI_LU_STATE ">State</Jurisdiction>
+                    <IssueNation tc="OLI_LU_NATION">Nation</IssueNation>
+                    <IssueDate>yyyy-mm-dd</IssueDate>
+                    <PaidToDate>yyyy-mm-dd</PaidToDate>
+                    <BilledToDate>yyyy-mm-dd</BilledToDate>
+                    <PaymentMode tc="OLI_LU_PAYMODE">Mode</PaymentMode>
+                    <PaymentAmt>Modal Premium</PaymentAmt>
+                    <PaymentMethod tc="OLI_LU_PAYMETHOD">BillType</PaymentMethod>
+                    <AccountNumber>Bank or CC#</AccountNumber>
+                    <RoutingNumber>Routing Number</RoutingNumber>
+                    <BankAcctType tc="OLI_LU_BANKACCTTYPE">Acct Type</BankAcctType>
+                    <PaymentDraftDay>Day#</PaymentDraftDay>
+                    <PaymentDueDate>yyyy-mm-dd</PaymentDueDate>
+                    <CWAAmt>0.00</CWAAmt>
+                    <BillNumber>##########</BillNumber>
+                    <GroupNumber>########</GroupNumber>
+                    <StatusChangeDate>yyyy-mm-dd</StatusChangeDate>
+                    <Annuity>
+                        <PremType>OLI_LU_ANNPREM - Single, Flex, Fixed, Other</PremType>
+                        <PayoutType>OLI_LU_ANNPAYOUT - Immediate, Deferred, Other</PayoutType>
+                        <QualPlanType>OLI_LU_QUALPLAN</QualPlanType>
+                        <SourceOfFundsTC>OLI_LU_SOURCEOFFUNDS</SourceOfFundsTC>
+                        <FinancialActivity>Used if multiple sources of funds</FinancialActivity>
+                        <Payout>
+                            <IncomeOption>OLI_LU_INCOPTION</IncomeOption>
+                            <NumModalPayouts>Number of Modal Payouts</NumModalPayouts>
+                            <PayoutAmt>Currency Amount</PayoutAmt>
+                            <PayoutMode>OLI_LU_PAYMODE </PayoutMode>
+                            <PeriodCertainMode>OLI_LU_PAYMODE</PeriodCertainMode>
+                            <PeriodCertainPeriods>Integer</PeriodCertainPeriods>
+                            <StartDate></StartDate>
+                            <TaxWithheldInd>Yes/No</TaxWithheldInd>
+                            <FederalTaxWithheld></FederalTaxWithheld>
+                            <JurisdictionTaxWithheld>Modal amount of state taxes withheld</JurisdictionTaxWithheld>
+                            <LocalTaxWithheld>City taxes withheld</LocalTaxWithheld>
+                            <ArrDestination PaymentPartyID="Party_3a" BankingInfoID="Bank_Holding_1">
+                                <PaymentForm>OLI_LU_PAYMENTFORM</PaymentForm>
+                                <PayeeRelationRoleCode>OLI_LU_PARTICROLE</PayeeRelationRoleCode>
+                            </ArrDestination>
+                        </Payout>
+                        <RequestedMaturityDate>Annuitization Date</RequestedMaturityDate>
+                        <KeyedValue></KeyedValue>
+                    </Annuity>
+                    <KeyedValue>
+                        <KeyName>PetName</KeyName>
+                        <KeyValue>Scooby Doo</KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>MEMO</KeyName>
+                        <KeyValue></KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>PolReplacement</KeyName>
+                        <KeyValue>Y</KeyValue>
+                    </KeyedValue>
+                    <FormInstance ID="Form_1">
+                        <FormName>Life-App-1</FormName>
+                        <Attachment>
+                            <Description>Your description</Description>
+                            <UserCode>APPX</UserCode>
+                            <MimeTypeTC tc="17">PDF</MimeTypeTC>
+                            <FileName>Filename.Ext</FileName>
+                            <AttachmentData>Base64 Encoded Binary Data</AttachmentData>
+                        </Attachment>
+                    </FormInstance>
+                    <FormInstance ID="Form_2">
+                        <FormName>MedExam-1</FormName>
+                        <Attachment>
+                            <Description>Your description</Description>
+                            <UserCode>APPX</UserCode>
+                            <MimeTypeTC tc="17">PDF</MimeTypeTC>
+                            <FileName>Filename.Ext</FileName>
+                            <AttachmentData>Base64 Encoded Binary Data</AttachmentData>
+                        </Attachment>
+                    </FormInstance>
+                </Policy>
+            </Holding>
+            <Holding id="Bank_Holding_1">
+                <HoldingTypeCode tc="7">Banking</HoldingTypeCode>
+                <Banking>
+                    <BankAcctType tc="1">Savings</BankAcctType>
+                    <RoutingNumber>999999999</RoutingNumber>
+                    <AccountNumber>99999999</AccountNumber>
+                    <AcctHolderName>John Doe</AcctHolderName>
+                </Banking>
+            </Holding>
+            <Party id="Party_1">
+                <PartyTypeCode tc="1">Person</PartyTypeCode>
+                <GovtID>123-45-6789</GovtID>
+                <EMailAddress id="EMailAddress_1">
+                    <EMailType tc="2">Personal</EMailType>
+                    <AddrLine>john.doe@example.com</AddrLine>
+                </EMailAddress>
+                <Person>
+                    <Prefix></Prefix>
+                    <FirstName>John</FirstName>
+                    <MiddleName>A</MiddleName>
+                    <LastName>Doe</LastName>
                     <Suffix>Jr.</Suffix>
-                </PersonName>
-                <BirthDt>1985-01-15</BirthDt>
-                <Phone>15551234567</Phone>
-            </PersonInfo>
-        </InsuredOrPrincipal>
-    </InsuranceSvcRq>
-</ACORD>
+                    <Gender>Male</Gender>
+                    <Birthdate>1985-07-15</Birthdate>
+                </Person>
+                <Address>
+                    <Line1>123 Elm Street</Line1>
+                    <Line2>P.O. Box 456</Line2>
+                    <City>Springfield</City>
+                    <AddressStateTC tc="4">AZ</AddressStateTC>
+                    <Zip>62704</Zip>
+                    <AddressCountryTC tc="0001">USA</AddressCountryTC>
+                </Address>
+                <Address>
+                    <AddressTypeCode tc="31">Alternate Address</AddressTypeCode>
+                    <Line1>First line of Alternate Address</Line1>
+                    <Line2>Second line of Alternate Address</Line2>
+                    <City>City of Alternate Address</City>
+                    <AddressStateTC tc="4">AZ</AddressStateTC>
+                    <Zip>XXXXX</Zip>
+                    <AddressCountryTC tc="0001">USA</AddressCountryTC>
+                    <KeyedValue>
+                        <KeyName>ALTADDRACTIVE</KeyName>
+                        <KeyValue>T</KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>ALTADDRPERMANENT</KeyName>
+                        <KeyValue>T</KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>ALTADDRBEGMONTH</KeyName>
+                        <KeyValue>1</KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>ALTADDRBEGDAY</KeyName>
+                        <KeyValue>1</KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>ALTADDRENDMONTH</KeyName>
+                        <KeyValue>12</KeyValue>
+                    </KeyedValue>
+                    <KeyedValue>
+                        <KeyName>ALTADDRENDDAY</KeyName>
+                        <KeyValue>31</KeyValue>
+                    </KeyedValue>
+                </Address>
+                <Phone tc="OLI_LU_PHONETYPE">
+                    <CountryCode>1</CountryCode>
+                    <AreaCode>000</AreaCode>
+                    <DialNumber>0000000</DialNumber>
+                    <Ext></Ext>
+                </Phone>
+            </Party>
+            <Party id="Party_2">
+                <PartyTypeCode tc="1">Person</PartyTypeCode>
+                <GovtID>999-99-9999</GovtID>
+                <EMailAddress id="EMailAddress_1">
+                    <EMailType tc="2">Personal</EMailType>
+                    <AddrLine> XXXXX@XXXXX.XXX </AddrLine>
+                </EMailAddress>
+                <Person>
+                    <Prefix>XXXXXXXXXX</Prefix>
+                    <FirstName>XXXXXXXXXX</FirstName>
+                    <MiddleName>XXXXXXXXXX</MiddleName>
+                    <LastName>XXXXXXXXXX</LastName>
+                    <Suffix>XXXXXXXXXX</Suffix>
+                    <Gender tc="2">F</Gender>
+                    <Birthdate>yyyy-mm-dd</Birthdate>
+                </Person>
+                <Address>
+                    <Line1>First line of address</Line1>
+                    <Line2>Second line of address</Line2>
+                    <City>City of address</City>
+                    <AddressStateTC tc="51">TX</AddressStateTC>
+                    <Zip>XXXXX</Zip>
+                    <AddressCountryTC tc="0001">USA</AddressCountryTC>
+                </Address>
+                <Phone tc="OLI_LU_PHONETYPE">
+                    <CountryCode>9</CountryCode>
+                    <AreaCode>999</AreaCode>
+                    <DialNumber>9999999</DialNumber>
+                    <Ext>99999</Ext>
+                </Phone>
+            </Party>
+            <Party id="Party_3a">
+                <PartyTypeCode tc="1">Person</PartyTypeCode>
+                <GovtID>999-99-9999</GovtID>
+                <EMailAddress id="EMailAddress_1">
+                    <EMailType tc="2">Personal</EMailType>
+                    <AddrLine> XXXXX@XXXXX.XXX </AddrLine>
+                </EMailAddress>
+                <Person>
+                    <Prefix>XXXXXXXXXX</Prefix>
+                    <FirstName>XXXXXXXXXX</FirstName>
+                    <MiddleName>XXXXXXXXXX</MiddleName>
+                    <LastName>XXXXXXXXXX</LastName>
+                    <Suffix>XXXXXXXXXX</Suffix>
+                    <Gender tc="OLI_LU_GENDER">F</Gender>
+                    <Birthdate>yyyy-mm-dd</Birthdate>
+                </Person>
+                <Address>
+                    <Line1>First line of address</Line1>
+                    <Line2>Second line of address</Line2>
+                    <City>City of address</City>
+                    <AddressStateTC tc="OLI_LU_STATE"></AddressStateTC>
+                    <Zip>XXXXX</Zip>
+                    <AddressCountryTC tc="OLI_LU_NATION"></AddressCountryTC>
+                </Address>
+                <Phone tc="OLI_LU_PHONETYPE">
+                    <CountryCode>9</CountryCode>
+                    <AreaCode>999</AreaCode>
+                    <DialNumber>9999999</DialNumber>
+                    <Ext>99999</Ext>
+                </Phone>
+            </Party>
+            <Party id="Party_3b">
+                <PartyTypeCode tc="2">Organization</PartyTypeCode>
+                <Organization>
+                    <DBA>OrganizationName</DBA>
+                    <OrgForm tc="OLI_ORG_TRUST">Trust</OrgForm>
+                </Organization>
+                <Address>
+                    <Line1>123 Main St</Line1>
+                    <Line2>Suite 100</Line2>
+                    <City>Austin</City>
+                    <AddressStateTC tc="51"></AddressStateTC>
+                    <Zip>78701</Zip>
+                    <AddressCountryTC tc="1">USA</AddressCountryTC>
+                </Address>
+            </Party>
+            <Party id="Party_3c">
+                <PartyTypeCode tc="0">Unknown</PartyTypeCode>
+                <KeyedValue>
+                    <KeyName>ENTITYNAME</KeyName>
+                    <KeyValue>My Entity�s Name</KeyValue>
+                </KeyedValue>
+            </Party>
+            <Party id="Party_4">
+                <PartyTypeCode tc="1">Person</PartyTypeCode>
+                <GovtID>999-99-9999</GovtID>
+                <EMailAddress id="EMailAddress_1">
+                    <EMailType tc="2">Personal</EMailType>
+                    <AddrLine> XXXXX@XXXXX.XXX </AddrLine>
+                </EMailAddress>
+                <Person>
+                    <Prefix>XXXXXXXXXX</Prefix>
+                    <FirstName>XXXXXXXXXX</FirstName>
+                    <MiddleName>XXXXXXXXXX</MiddleName>
+                    <LastName>XXXXXXXXXX</LastName>
+                    <Suffix>XXXXXXXXXX</Suffix>
+                    <Gender tc="OLI_LU_GENDER">F</Gender>
+                    <Birthdate>yyyy-mm-dd</Birthdate>
+                </Person>
+                <Address>
+                    <Line1>First line of address</Line1>
+                    <Line2>Second line of address</Line2>
+                    <City>City of address</City>
+                    <AddressStateTC tc="21">KY</AddressStateTC>
+                    <Zip>XXXXX</Zip>
+                    <AddressCountryTC tc="001">USA</AddressCountryTC>
+                </Address>
+                <Phone tc="OLI_LU_PHONETYPE">
+                    <CountryCode>9</CountryCode>
+                    <AreaCode>999</AreaCode>
+                    <DialNumber>9999999</DialNumber>
+                    <Ext>99999</Ext>
+                </Phone>
+            </Party>
+            <Party id="Agent_1">
+                <PartyTypeCode tc="1">Person</PartyTypeCode>
+                <Person>
+                    <FirstName>XXXXXXXXXX</FirstName>
+                    <LastName>XXXXXXXXXX</LastName>
+                </Person>
+                <Producer>
+                    <CarrierAppointment>
+                        <CompanyProducerID>XXXXXX</CompanyProducerID>
+                    </CarrierAppointment>
+                </Producer>
+            </Party>
+            <Party id="Agent_2">
+                <PartyTypeCode tc="1">Person</PartyTypeCode>
+                <Person>
+                    <FirstName>XXXXXXXXXX</FirstName>
+                    <LastName>XXXXXXXXXX</LastName>
+                </Person>
+                <Producer>
+                    <CarrierAppointment>
+                        <CompanyProducerID>XXXXXX</CompanyProducerID>
+                    </CarrierAppointment>
+                </Producer>
+            </Party>
+            <Relation ID="Relation_1" RelatedObjectID="Agent_1" OriginatingObjectID="Holding_1">
+                <RelationDescription>Spouse</RelationDescription>
+                <RelatedObjectType tc="6">Party</RelatedObjectType>
+                <RelationRoleCode tc="11"> Agent</RelationRoleCode>
+                <InterestPercent>50</InterestPercent>
+            </Relation>
+            <Relation ID="Relation_2" RelatedObjectID="Agent_2" OriginatingObjectID="Holding_1">
+                <RelationDescription>Agent</RelationDescription>
+                <RelatedObjectType tc="6">Party</RelatedObjectType>
+                <RelationRoleCode tc="11"> Agent</RelationRoleCode>
+                <InterestPercent>50</InterestPercent>
+            </Relation>
+            <Relation ID="Relation_3" RelatedObjectID="Party_3b" OriginatingObjectID="Holding_1">
+                <RelationDescription>Funeral Home</RelationDescription>
+                <RelatedObjectType tc="6">Party</RelatedObjectType>
+                <RelationRoleCode tc="277"> Funeral Parlour</RelationRoleCode>
+            </Relation>
+        </OLifE>
+    </TXLifeRequest>
+</TXLife>
+
+
+
+
